@@ -1,0 +1,72 @@
+
+/*=========================slide轮播图==========================*/
+.slide-wrap{ position: relative; width: 100%; height: 640px; z-index: 2; overflow: hidden;}
+.slideBox{ width:100%;  position:relative; height: 640px;}
+.slideBox .hd{ height:15px; width: 100%; overflow:hidden; position:absolute; bottom: 18px; z-index:3; display: flex; justify-content: center;}
+.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.slideBox .hd ul li{ float:left; margin-right:15px; width:34px; height:8px; border-radius: 25px; cursor:pointer; background: #a6a9b9; }
+.slideBox .hd ul li.on{ background: #383d53; } 
+.slideBox .bd{ height:640px; width: 1920px; position:absolute; left: 50%; margin-left: -960px; z-index: 2;}
+.slideBox .bd li{ position: relative; zoom:1; vertical-align:middle; }
+.slideBox .bd li img{display:block; height:640px; width: 1920px; }
+.slide-wrap .prev,
+.slide-wrap .next{ position:absolute; z-index: 99; left:3%; top:50%; margin-top:-25px; display:block; width:23px; height:38px; background: url(../images/arrow-left.png) 0px 0px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
+.slide-wrap .next{ left:auto; right:3%; background-image: url(../images/arrow-right.png);}
+.slide-wrap .prev:hover,
+.slide-wrap .next:hover{ filter:alpha(opacity=100);opacity:1; }
+
+/*=========================四大服务==========================*/
+.service{ background: #fafafa; padding: 50px 0 90px;}
+.title{ position: relative; padding-bottom: 12px;}
+.title .en{ font-size: 36px; color: #333333; text-align: center; letter-spacing: 3px; padding-left: 3px;}
+.title .cn{ margin-top: -5px; font-size: 30px; color: #404040; text-align: center; letter-spacing: 3px; padding-left: 3px;}
+.title .line{ position: absolute; bottom: 0; left: 50%; margin-left: -26px; width: 52px; height: 4px; background: #b89859;}
+.service .cnt{ overflow: hidden; margin-top: 40px;}
+.service .cnt li{ float: left; position: relative; width: 240px; height: 240px; margin: 0 30px; background-image: url(../images/circle-bg-1.png); transition: .3s;}
+.service .cnt li:hover{ background-image: url(../images/circle-bg-on.png);}
+.service .cnt li:hover .name{ color: #cea85c;}
+.service .cnt li:nth-child(1):hover .pic{ background-image: url(../images/service-01-on.png);}
+.service .cnt li:nth-child(2):hover .pic{ background-image: url(../images/service-02-on.png);}
+.service .cnt li:nth-child(3):hover .pic{ background-image: url(../images/service-03-on.png);}
+.service .cnt li:nth-child(4):hover .pic{ background-image: url(../images/service-04-on.png);}
+.service .cnt li .pic{ position: absolute; bottom: 110px; width: 100%; height: 110px; transition: .3s;}
+.service .cnt li:nth-child(1) .pic{ background: url(../images/service-01.png) no-repeat center bottom; background-size: 74px;}
+.service .cnt li:nth-child(2) .pic{ background: url(../images/service-02.png) no-repeat center bottom; background-size: 63px;}
+.service .cnt li:nth-child(3) .pic{ background: url(../images/service-03.png) no-repeat center bottom; background-size: 60px;}
+.service .cnt li:nth-child(4) .pic{ background: url(../images/service-04.png) no-repeat center bottom; background-size: 72px;}
+.service .cnt li .name{ position: absolute; bottom: 72px; width: 100%; text-align: center; font-size: 18px; color: #404040; transition: .3s;}
+
+/*=========================关于我们==========================*/
+.about{ padding: 50px 0 65px;}
+.about .brief{ padding: 40px 0 50px; font-size: 18px; color: #333333; text-align: center; line-height: 42px;}
+.about .list{ overflow: hidden; margin-right: -20px;}
+.about .list li{ float: left; width: 285px; height: 200px; margin-right: 20px; overflow: hidden;}
+.about .list li img{ display: block; width: 100%; height: 100%; transition: all .5s;}
+.about .list li:hover img{ transform: scale(.95);}
+
+/*=========================案例展示==========================*/
+.case{ padding: 50px 0 50px; background: #fafafa;}
+.case .list{ margin-top: 90px;}
+.case .list li{ float: left; width: 20%;}
+.case .list li:hover .pic .mask{ background: rgba(0,0,0,0);}
+.case .list li:hover .infor{ position: relative; box-shadow: 0 5px 10px #e9e8e8;}
+.case .list li .pic{ position: relative; width: 100%; overflow: hidden;}
+.case .list li .pic img{ display: block; width: 100%;}
+.case .list li .pic .mask{ position: absolute; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.37); transition: all .3s;}
+.case .list li .infor{ height: 160px; overflow: hidden; background: #fff;}
+.case .list li .line{ width: 40px; height: 2px; background: #b89859; margin: 40px auto 0; cursor: pointer;}
+.case .list li .cn{ margin-top: 15px; font-size: 18px; color: #333333; text-align: center; overflow: hidden; padding: 0 40px; cursor: pointer;}
+.case .list li .en{ margin-top: 5px; font-size: 14px; color: #595959; text-align: center; padding: 0 40px; cursor: pointer;}
+.case .more{ display: block; width: 125px; border-radius: 1px; transition: .3s; height: 38px; margin: 70px auto 0; font-size: 14px; color: #595959; line-height: 38px; text-align: center; border: 1px solid #595959;}
+.case .more:hover{ font-size: 15px;}
+
+/*=========================联系我们==========================*/
+.contact{ padding: 50px 0 110px;}
+.contact .list{ margin-top: 100px; overflow: hidden;}
+.contact .list li{ float: left; width: 400px;}
+.contact .list li .circle{ width: 150px; height: 150px; border-radius: 50%; margin: 0 auto;}
+.contact .list li:nth-child(1) .circle{ background: #eeeeee url(../images/icon-address.png) no-repeat center;}
+.contact .list li:nth-child(2) .circle{ background: #eeeeee url(../images/icon-email.png) no-repeat center;}
+.contact .list li:nth-child(3) .circle{ background: #eeeeee url(../images/icon-tel.png) no-repeat center;}
+.contact .list li .infor{ font-size: 18px; text-align: center; color: #333333; margin-top: 40px;}
+
